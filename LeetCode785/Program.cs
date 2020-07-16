@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace LeetCode785
 {
@@ -8,66 +9,51 @@ namespace LeetCode785
     {
         static void Main(string[] args)
         {
+            int[][] g = new int[][] { new int[] { 1, 3 }, new int[] { 0, 2 }, new int[] { 1, 3 }, new int[] { 0, 2 } };
+            Solution s = new Solution();
+            Console.WriteLine(s.IsBipartite(g).ToString());
+
         }
     }
 
     public class Solution
     {
+        private bool res;
+        private List<bool?> nodeInSet;
         public bool IsBipartite(int[][] graph)
         {
-            List<bool[]> connectivityMatrix = new List<bool[]>();
-            
-            for (int nodeIndex = 0; nodeIndex < graph.Length; ++nodeIndex)
+            res = true;
+            nodeInSet = new List<bool?>(Enumerable.Repeat<bool?>(null, graph.Length));
+
+            for(int index = 0; index < graph.Length; ++index)
             {
-                foreach(int connectedNode in graph[nodeIndex])
+                if (!nodeInSet[index].HasValue)
                 {
-                    if(connectedNode > nodeIndex)
-                    {
-                        bool[] lineConnection = new bool[graph.Length];
-                        lineConnection[nodeIndex] = true;
-                        lineConnection[connectedNode] = true;
-                        connectivityMatrix.Add(lineConnection);
-                    }
+                    this.Assign(index, true, ref graph);
                 }
-            }
-
-            bool[] setAValidation = new bool[connectivityMatrix.Count];
-            bool[] setBValidation = new bool[connectivityMatrix.Count];
-            HashSet<int> processedNodes = new HashSet<int>();
-            int nowProcessingNode = 0;
-            while (processedNodes.Count < graph.Length)
-            {
-                List<bool> connect = connectivityMatrix.GetConnectivityForNode(nowProcessingNode);
-                bool flag = false;
-                foreach(bool b in connect)
-                {
-                    //// TODO::
-                    if (b && !flag)
-                    {
-
-                    }
-                    else if (b)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-                }
-            }
-        }
-    }
-    public static class Extension
-    {
-        public static List<bool> GetConnectivityForNode(this List<bool[]> matrix, int node)
-        {
-            List<bool> res = new List<bool>();
-            foreach(bool[] b in matrix)
-            {
-                res.Add(b[node]);
             }
             return res;
+        }
+        private void Assign(int nodeNum, bool assignment, ref int[][] graph)
+        {
+            nodeInSet[nodeNum] = assignment;
+            bool nAssign = !assignment;
+            foreach(int neighborNodeNumber in graph[nodeNum])
+            {
+                if (!nodeInSet[neighborNodeNumber].HasValue)
+                {
+                    this.Assign(neighborNodeNumber, nAssign, ref graph);
+                    if(!res)
+                    {
+                        return;
+                    }
+                }
+                else if (nodeInSet[neighborNodeNumber] != nAssign)
+                {
+                    res = false;
+                    return;
+                }
+            }
         }
     }
 }
