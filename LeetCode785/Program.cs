@@ -10,6 +10,7 @@ namespace LeetCode785
         static void Main(string[] args)
         {
             int[][] g = new int[][] { new int[] { 1, 3 }, new int[] { 0, 2 }, new int[] { 1, 3 }, new int[] { 0, 2 } };
+            int[][] c = new int[][] { new int[] { 1, 3 } };
             Solution s = new Solution();
             Console.WriteLine(s.IsBipartite(g).ToString());
 
