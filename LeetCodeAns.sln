@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode785", "LeetCode785\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode35", "LeetCode35\LeetCode35.csproj", "{3B2BF130-3097-472B-B5FE-B859EEC186B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode154", "LeetCode154\LeetCode154.csproj", "{75A5C6EA-7098-47B3-96F6-B366EBE770EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode154", "LeetCode154\LeetCode154.csproj", "{75A5C6EA-7098-47B3-96F6-B366EBE770EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode17", "LeetCode17\LeetCode17.csproj", "{ABB152F9-BBF5-485F-87DC-BFD16B8E8E0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode17", "LeetCode17\LeetCode17.csproj", "{ABB152F9-BBF5-485F-87DC-BFD16B8E8E0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode443", "LeetCode443\LeetCode443.csproj", "{F5FE3BC3-72C7-49AA-9900-D239F44FA949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode42", "LeetCode42\LeetCode42.csproj", "{B2319860-F446-4CE9-BA07-8462FF772385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{ABB152F9-BBF5-485F-87DC-BFD16B8E8E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABB152F9-BBF5-485F-87DC-BFD16B8E8E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABB152F9-BBF5-485F-87DC-BFD16B8E8E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FE3BC3-72C7-49AA-9900-D239F44FA949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FE3BC3-72C7-49AA-9900-D239F44FA949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FE3BC3-72C7-49AA-9900-D239F44FA949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FE3BC3-72C7-49AA-9900-D239F44FA949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2319860-F446-4CE9-BA07-8462FF772385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2319860-F446-4CE9-BA07-8462FF772385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2319860-F446-4CE9-BA07-8462FF772385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2319860-F446-4CE9-BA07-8462FF772385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
