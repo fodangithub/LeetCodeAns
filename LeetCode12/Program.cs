@@ -44,6 +44,7 @@ namespace LeetCode12
                     sb.Insert(0, dict[n][index]);
                 }
             }
+            
             return sb.ToString();
         }
     }
